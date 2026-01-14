@@ -223,13 +223,13 @@ BEGIN
 			id,
 			cat,
 			subcat,
-			maintainance
+			maintenance
 		)
 		SELECT
 			id,
 			cat,
 			subcat,
-			maintainance
+			maintenance
 		FROM bronze.erp_px_cat_g1v2;
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
@@ -251,3 +251,4 @@ BEGIN
 		PRINT '=========================================='
 	END CATCH
 END
+
